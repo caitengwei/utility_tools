@@ -13,7 +13,7 @@ die "You must pass a Chinese/English word as parameter" if ( ! $keyword );
 
 my $url  = 'http://dict.youdao.com/search?q=KEYW0RD&ue=utf8';
 $keyword = uri_escape( $keyword );
-$urls    =~ s/KEYW0RD/$keyword/;
+$url     =~ s/KEYW0RD/$keyword/;
 
 my $ua = LWP::UserAgent->new;
 $ua->timeout(30);
