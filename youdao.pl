@@ -49,10 +49,10 @@ sub get_translation {
     if ( $tree->exists('//div[@id=\'eTransform\']') ) {
         # Get the basic translation of the word
         $screen->print( $tree->findvalue('//div[@id=\'eTransform\']/h3/span/a[@rel=\'#etcTrans\']/span'), "\n" );
-        my @translation_list = $tree->findvalues( '//div[@id=\'eTransform\']/div/div[@id=\'etcTrans\']/ul' . 'li' );
+        my @translation_list = $tree->findvalues( '//div[@id=\'eTransform\']/div/div[@id=\'etcTrans\']/ul/' . 'li' );
         if ($#translation_list == -1 ) {
             # If didn't get any translation, it may be a chinese word
-            @translation_list = $tree->findvalues( '//div[@id=\'eTransform\']/div/div[@id=\'etcTrans\']/ul' . 'p' );
+            @translation_list = $tree->findvalues( '//div[@id=\'eTransform\']/div/div[@id=\'etcTrans\']/ul/' . 'p' );
         }
         foreach (@translation_list) {
             $screen->print( ' ' x $indent, trim( $_ ), "\n" );
