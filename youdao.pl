@@ -6,7 +6,6 @@ use LWP::UserAgent;
 use HTML::TreeBuilder::XPath;
 use URI::Escape;
 use Data::Dumper;
-use encoding "utf-8";
 
 my $url     = 'http://dict.youdao.com/search?q=KEYW0RD&ue=utf8';
 my %ele_map = (
