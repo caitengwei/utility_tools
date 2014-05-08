@@ -1,6 +1,10 @@
 #!/usr/bin/perl
+
 use strict;
 use warnings;
+use utf8;
+
+use Encode qw(encode);
 use IO::Scalar;
 use LWP::UserAgent;
 use HTML::TreeBuilder::XPath;
@@ -55,7 +59,7 @@ my $screen = IO::Scalar->new (\$buffer);
 my $tree = HTML::TreeBuilder::XPath->new_from_content ($page->decoded_content);
 
 get_translation ($tree, $screen);
-print $buffer;
+print encode('UTF-8', $buffer);
 
 END {
     $tree->delete ();
