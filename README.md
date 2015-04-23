@@ -4,7 +4,7 @@
 ##工具列表
 * **youdao.pl**
 
-	在线查询单词释义的脚本，主要通过抓取有道词典(http://dict.youdao.com)的网页内容实现。
+	在线查询单词释义的脚本，主要通过抓取[有道词典](http://dict.youdao.com)的网页内容实现。
 	
 * **enable_ftp.sh**
 
